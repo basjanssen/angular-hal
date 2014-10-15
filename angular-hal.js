@@ -77,6 +77,10 @@ angular.module('angular-hal', [])
                     Object.defineProperty(this, key, {
                         configurable: false,
                         enumerable: true,
+                        writable: true, /* https://github.com/LuvDaSun/angular-hal/issues/6
+                                           Ultimately, we'd like to pass a writable-parameter when requesting a
+                                           resource, that would indicate whether or not the properties of the
+                                           returned resource are writable or read-only */
                         value: data[key]
                     });
                 }, this);
