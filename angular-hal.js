@@ -254,3 +254,5 @@ angular.module('angular-hal', [])
     }
 
 ]); //service
+
+export default 'angular-hal';
